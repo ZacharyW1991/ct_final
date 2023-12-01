@@ -1,0 +1,46 @@
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+}
+
+nav{
+    display: inline;
+    color: white;
+}
+
+nav  ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 30px;
+}
+
+#hero-image{
+    background-image: url('../image/sakurabloom.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ;
+    height: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+body{
+    background-image: url('../image/osakajo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.card {
+    background: linear-gradient(109.6deg, rgb(255, 221, 225) 11.2%, rgb(255, 255, 255) 92.2%);
+    max-width: 50%;
+}

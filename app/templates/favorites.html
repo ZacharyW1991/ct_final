@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block header %}<h1> Favorited Kanji:</h1>{% endblock %}
+
+
+{% block content %}
+<h3>Logged in as {{current_user.username}}</h3>
+{% for k in e_fave %}
+    <div class="card mb-3">
+        <div class="row g-0">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h2 class="card-title">{{ k.kanji.character }}</h2>
+            <p class="card-text">Meaning: {{ k.kanji.meaning.english }}</p>
+            <p class="card-text">Onyomi: {{ k.onyomi.romaji }}</p>
+            <p class="card-text">Kunyomi: {{ k.kunyomi }}</p>
+            <p class="card-text">Strokes: {{ k.kstroke}}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+

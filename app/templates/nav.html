@@ -1,0 +1,18 @@
+<nav>
+    <div id="hero-image">
+        <h1>Kanji Sensei</h1>
+        <span>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('search_kanji') }}">Search</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                <li><a href="{{ url_for('favorites') }}">Favorites</a></li>
+                {% else %}
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                {% endif %}
+            </ul>
+        </span>
+    </div>
+</nav>

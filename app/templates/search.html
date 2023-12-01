@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Kanji Search{% endblock %}
+
+
+
+{% block content %}
+<form id="kanji-search-form">
+    <input name="meaning" placeholder="English Meaning">
+    <input name="name-reading" placeholder="Name Reading">
+    <input name="onyomi" placeholder="Onyomi Reading">
+    <input name="kunyomi" placeholder="Kunyomi Reading">
+    <button id="kanji-search-input" type="submit">Search</button>
+</form>
+<table id="kanji-table"></table>
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

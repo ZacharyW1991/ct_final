@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Log In{% endblock %}
+
+{% block header %}Log In Here{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.csrf_token }}
+
+    {{ form.username.label }}
+    {{ form.username(class='form-control', placeholder='Enter Username') }}
+
+    {{ form.password.label }}
+    {{ form.password(class='form-control', placeholder='Enter Password') }}
+
+    {{ form.submit }}
+</form>
+{% endblock %}
